@@ -1,0 +1,13 @@
+Server:
+  Host: go-server
+  Port: 8740
+Client:
+  Host: localhost
+  Port: 8730
+Pow:
+  HashcashZerosCount: 3
+  HashcashDuration: 20
+  HashcashMaxIterations: 1000000
+LogLevel: debug
+PrivKey: private_key_sec
+ExpTokenSec: 10

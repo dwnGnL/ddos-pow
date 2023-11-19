@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  go-server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    restart: no
+    ports:
+      - "8740:8740"
+    volumes:
+      - .:/app
+
+  go-client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    restart: no
+    ports:
+      - "8730:8730"
+    depends_on:
+      - go-server
+    volumes:
+      - .:/app
+
+volumes:
+  go-server:
+  go-client:
